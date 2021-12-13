@@ -1,0 +1,1 @@
+{"config": {"1": {"username": "99100", "password": "123456", "main_url": [{"host": "192.168.155.228", "port": 80, "url_add": "", "method": "post/list/"}, {"host": "94.182.46.6", "port": 8080, "url_add": "", "method": "post/list/"}], "open_sep": true, "login_flag": true}}}

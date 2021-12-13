@@ -5,7 +5,7 @@ from os import sep
 from core.config.Config import main_url, open_sep, username, password, login_flag
 from core.model.ping import ping
 
-url = {"host": "192.168.1.4", "port": 80, "url_add": "Hafez/Monitoring_Tile/post/list/"}
+url = {"host": "192.168.155.228", "port": 80, "url_add": "", "method": "post/list/"}
 
 for url_in in main_url:
     if ping(url_in["host"]):
@@ -26,10 +26,9 @@ chrome_path = chrome.find_path()
 if chrome_path is not None:
     if open_sep:
         if login_flag and username != "" and password != "":
-            url_with_UP = url["url_add"] + "client/access/login/test/" + username + "/" + password +\
+            url_with_UP = url["url_add"] + "client/access/login/test/" + username + "/" + password + \
                           "?callBack=http://" + urlT
-            eel.start(url_with_UP, options=my_options)
-            print(url_with_UP)
+            eel.start(url_with_UP, suppress_error=True, block=False, options=my_options)
         else:
             eel.start(url["url_add"] + url["method"], options=my_options)
     else:

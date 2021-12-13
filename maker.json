@@ -7,7 +7,7 @@
   },
   {
    "optionDest": "filenames",
-   "value": "C:/project/Hafez/program for access web/main/main.py"
+   "value": "D:\\project\\manufactor\\Version\\program for access web\\opener\\main.py"
   },
   {
    "optionDest": "onefile",
@@ -18,8 +18,12 @@
    "value": false
   },
   {
+   "optionDest": "icon_file",
+   "value": "D:/project/manufactor/Version/program for access web/opener/core/theme/icons/logo.ico"
+  },
+  {
    "optionDest": "name",
-   "value": "opener"
+   "value": "\u0637\u0631\u0627\u062d\u06cc"
   },
   {
    "optionDest": "ascii",
@@ -67,15 +71,15 @@
   },
   {
    "optionDest": "datas",
-   "value": "C:/project/Hafez/program for access web/main/Config;Config/"
+   "value": "D:\\project\\manufactor\\Version\\program for access web\\opener/Config;Config/"
   },
   {
    "optionDest": "datas",
-   "value": "C:/project/Hafez/program for access web/main/core;core/"
+   "value": "D:\\project\\manufactor\\Version\\program for access web\\opener\\core;core/"
   },
   {
    "optionDest": "datas",
-   "value": "C:/project/Hafez/program for access web/main/app;app/"
+   "value": "D:\\project\\manufactor\\Version\\program for access web\\opener\\app;app/"
   }
  ],
  "nonPyinstallerOptions": {

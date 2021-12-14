@@ -30,7 +30,8 @@ if chrome_path is not None:
                           "?callBack=http://" + urlT
             eel.start(url_with_UP, suppress_error=True, block=False, options=my_options)
         else:
-            eel.start(url["url_add"] + url["method"], options=my_options)
+            print("miad inja")
+            eel.start(url["url_add"] + url["method"], suppress_error=True, block=False, options=my_options)
     else:
         chrome_path = chrome_path.replace(sep, '/') + ' %s'
         get(chrome_path).open(urlT)

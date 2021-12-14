@@ -1,30 +1,31 @@
 from app.ResourcePath.app_provider.admin.main import resource_path
-import os
 from tinydb import TinyDB
-import hashlib
+
+# import hashlib
 
 config_path = "Config/"
 config_db_name = 'config.json'
 config_table_name = 'config'
-
-os.makedirs(resource_path(config_path), exist_ok=True)
-
 config_db_path = resource_path(config_path + config_db_name)
-config_db = TinyDB(config_db_path).table(config_table_name)
+hasConfig = False
 
 try:
+    config_db = TinyDB(config_db_path).table(config_table_name)
     sAll = config_db.all()[0]
+    hasConfig = True
 except:
-    print("config not found in {link} with table {table}".format(link=config_db_path, table=config_table_name))
-# sAll = ConfigTB.get(doc_id=1)
+    sAll = []
 
-if not len(config_db):
-    print(len(config_db))
-    print("import Config First")
-
-username = sAll["username"]
-password = sAll["password"]
-main_url = sAll["main_url"]
-open_sep = sAll["open_sep"]
-login_flag = sAll["login_flag"]
-
+if hasConfig:
+    username = sAll["username"]
+    password = sAll["password"]
+    main_url = sAll["main_url"]
+    open_sep = sAll["open_sep"]
+    login_flag = sAll["login_flag"]
+else:
+    username = ""
+    password = ""
+    open_sep = True
+    main_url = [{"host": "192.168.155.228", "port": 80, "url_add": "", "method": "post/list/"},
+                {"host": "94.182.46.6", "port": 8080, "url_add": "", "method": "post/list/"}]
+    login_flag = False
